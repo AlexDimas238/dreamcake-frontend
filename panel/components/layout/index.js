@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import Menu from '../Menu'
+import Menu from '../Menu/index'
 import { MdLabel, MdHome } from 'react-icons/md'
 import { useQuery } from '../../lib/graphql'
 
@@ -28,9 +28,10 @@ const Layout = ({ children }) => {
     <div>
       <div className='flex h-screen bg-gray-200'>
         <div
-          className={sidebarOpen ? 'block' : 'hidden'}
+          className={`${
+            sidebarOpen ? 'block' : 'hidden'
+          } fixed z-20 inset-0 bg-black opacity-50 transition-opacity lg:hidden`}
           onClick={close}
-          className='fixed z-20 inset-0 bg-black opacity-50 transition-opacity lg:hidden'
         ></div>
 
         <div
@@ -41,7 +42,7 @@ const Layout = ({ children }) => {
               : '-translate-x-full ease-in')
           }
         >
-          <Menu.Brand>DevShop</Menu.Brand>
+          <Menu.Brand>DreamCake</Menu.Brand>
           <Menu.Nav>
             <Menu.NavItem href='/' Icon={MdHome}>
               Home
