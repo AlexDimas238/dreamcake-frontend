@@ -1,11 +1,8 @@
 import react from 'react'
+import Layout from '../components/layout'
 
 const index = () => {
-  return (
-    <div className='text-5xl font-bold underline'>
-      <h1>Dream Cake</h1>
-    </div>
-  )
+  return <Layout />
 }
 
 export default index
