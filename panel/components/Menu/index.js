@@ -9,7 +9,6 @@ const MenuNav = ({ children }) => {
   return <nav className='mt-10'>{children}</nav>
 }
 const MenuNavItem = ({ children, href, Icon }) => {
-  //
   // flex items-center mt-4 py-2 px-6 border-l-4 bg-gray-600 bg-opacity-25 text-gray-100 border-gray-100
   return (
     <Link
